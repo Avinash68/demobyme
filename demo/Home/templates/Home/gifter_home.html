@@ -1,0 +1,106 @@
+{% extends "base2.html" %}
+{% load static from staticfiles %}
+
+
+{% block content %}
+
+<nav class="navbar-inverse">
+  <div class="container-fluid" style="box-shadow: 0 1px 5px rgb(14, 15, 17);">
+     
+ 
+    <ul class="nav navbar-nav">
+     
+       <li><a href="{% url 'home:gifter' %}" role="button">Challenges</a></li>
+       <li><a href="{% url 'home:my_challenge' %}" role="button">My Challenges</a></li>
+      
+    </ul>
+    
+  </div>
+</nav>
+
+<div style="padding-top: 35px; padding-left: 100px; padding-right: 100px;">
+
+<div class="form-challenge" style="padding:2px;">
+<div class="row">
+
+<div class="col-md-4">
+<img src="{% static 'image/learn_to_run2.jpg' %}">
+</div>
+
+<div class="col-md-8">
+<h4><b><div style="padding-left: 80px;">21 - day learn to run challenge - Get Fit while Running.</b></h4>
+
+<div class="row">
+
+<div class="col-md-8">
+<div style="padding-left: 80px; padding-top: 20px;"><h4>23 Joined</h4></div>
+<div style="padding-left: 80px;"><h4>Created By - Daniel Steward</h4></div>
+<div style="padding-left: 80px;"><h4>Rivonia - Sandton</h4></div>
+<div style="padding-left: 80px;"><h5>Dec 1, 2016- 10.00AM To Dec 10, 2016- 5.00PM</h5></div>
+<div style="padding-left: 80px; font-size=16px; color: #0072BC;">Registration Closes on - 25th Nov, 2016</div>
+
+</div>
+
+<div style="padding-left: 80px; padding-top: 25px;">
+<div button type="button" class="btn btn-primary" >MORE INFO</button></div>
+</div>
+
+<div style="padding-left: 80px; padding-top: 20px;">
+<div button type="button" class="btn btn-primary" style="width: 100px;">SHARE</button></div>
+</div>
+
+<div style="padding-top: 20px;">
+<img src="{% static 'image/favorite.png' %}" style="width: 30px;">
+</div>
+
+</div>
+</div>
+</div>	
+</div>
+<br>
+<div class="form-challenge" style="padding:2px;">
+<div class="row">
+
+<div class="col-md-4">
+<img src="{% static 'image/learn_to_run2.jpg' %}">
+</div>
+
+<div class="col-md-8">
+<h4><b><div style="padding-left: 80px;">25 - days Beach cleaning activity.</b></h4>
+
+<div class="row">
+
+<div class="col-md-8">
+<div style="padding-left: 80px; padding-top: 20px;"><h4>20 Joined</h4></div>
+<div style="padding-left: 80px;"><h4>Created By - Daniel Steward</h4></div>
+<div style="padding-left: 80px;"><h4>Rivonia - Sandton</h4></div>
+<div style="padding-left: 80px;"><h5>Dec 1, 2016- 10.00AM To Dec 10, 2016- 5.00PM</h5></div>
+<div style="padding-left: 80px; font-size=16px; color: #0072BC;">Registration Closes on - 25th Nov, 2016</div>
+</div>
+
+<div style="padding-left: 80px; padding-top: 25px;">
+<div button type="button" class="btn btn-primary" >MORE INFO</button></div>
+</div>
+
+<div style="padding-left: 80px; padding-top: 20px;">
+<div button type="button" class="btn btn-primary" style="width: 100px;">SHARE</button></div>
+</div>
+
+<div style="padding-top: 20px;">
+<img src="{% static 'image/favorite.png' %}" style="width: 30px;">
+
+</div>
+
+</div>
+</div>
+</div>	
+			    						    
+</div>
+
+
+</div>
+
+
+
+
+{% endblock %}

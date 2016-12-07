@@ -1,0 +1,289 @@
+{% load static from staticfiles %}
+<!DOCTYPE html> 
+ <title>Gift Web</title>
+ 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="{% static 'css/style.css' %}" type="text/css" rel="stylesheet" media="all">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+
+<!-- jQuery library -->
+
+<script>
+function myFunction(x) {
+    x.style.background = "white";
+}    
+
+
+$(document).ready(function(){
+   	
+	$("#login").click(function(){
+    $("#register-modal").hide();
+       
+    });
+
+
+   <!-- div-forms-->
+       
+});    
+   
+
+</script>
+
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+  </style>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+      <div class="navbar-header">
+      <img id="img_logo" src="{% static 'image/gift2.png' %}" style="height: 50px; width: 275px;">
+    </div>
+ 
+    <ul class="nav navbar-nav navbar-right">
+     
+       <li><a href="#" role="button" data-toggle="modal" data-target="#login-modal">Login</a></li>
+       <li><a href="#" role="button" data-toggle="modal" data-target="#register-modal"><span class="glyphicon glyphicon-user"></span> Register</a></li>
+    </ul>
+  </div>
+</nav>
+     
+      <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="background-color: #0072BC;">
+       <span class="icon-bar" style="background-color:#fcf8e3;"></span>
+        <span class="icon-bar" style="background-color:#fcf8e3;"></span>
+        <span class="icon-bar" style="background-color:#fcf8e3;"></span>                        
+      </button>
+     
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar" style="background-color: #0072BC;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#" style="color: #fff;">Home</a></li>
+        <li><a href="#" style="color: #fff;">Location</a></li>
+        <li><a href="#" style="color: #fff;">Category</a></li>
+        <li><a href="#" style="color: #fff;">Profile</a></li>
+        <li><a href="#" style="color: #fff;">Ranking</a></li>
+        <li><a href="#" style="color: #fff;">Past Challenge</a></li>
+        <li><a href="#" style="color: #fff;">Inbox</a></li>
+        <li><a href="#" style="color: #fff;">Disclaimer</a></li>
+        <li><a href="#" style="color: #fff;">FAQs</a></li>
+      </ul>
+      
+    </div>
+
+     
+
+
+<!-- BEGIN # MODAL LOGIN -->
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    	<div class="modal-dialog">
+			<div class="modal-content1">
+				<!-- <div class="modal-header1" align="center">
+					
+					
+				</div> -->
+                
+                <!-- Begin # DIV Form -->
+                <div id="div-forms">
+                   
+                    <!-- Begin # Login Form -->
+                    <form id="login-form">
+                    
+		                <div class="modal-body1">
+				    		<button type="button" class="close" data-dismiss="modal">&times;</button>
+                         <center> <img src="{% static 'image/logo1.png' %}" style="width: 200px; height: 70px;"></center>
+                            <center><h3><span id="text-login-msg" style="color: white;">Get Involved For Tomorrow</span></h3></center>
+                            
+                            <div class="form-activate" style="padding:16px;">
+				    		
+				    		<div class="form-group">
+							 <label for="email" style="color: #d9d9d9;">Email</label>
+							    <input type="email" onfocus="myFunction(this)" class="form-control" id="email" style="background-color: #ddd;">
+							  </div>
+							  <div class="form-group">
+							    <label for="pwd" style="color: #d9d9d9;">Password</label>
+							    <input type="password"  onfocus="myFunction(this)" class="form-control" id="pwd" style="background-color: #ddd;">
+							  </div>
+							  
+				    		<div class="row">
+                            <div class="col-sm-6 col-md-6">
+                            <div class="checkbox">
+                                <label style="color:#d9d9d9;">
+                                    <input type="checkbox"> Remember me
+                                </label>
+                            </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6" style="padding: 10px; padding-left: 70px; ">
+                           <b><a href="{% url 'home:gifter' %}"><button class="w3-btn w3-yellow w3-border" style="padding: 1px 15px; color: #0072BC;">Log in</a></b>
+                            </div>
+                            </div>
+                            </div>
+                             <button id="login_lost_btn" type="button" class="btn btn-link" style="padding-left: 200px;">Forget Password?</button>
+        		    	</div>
+				        <div class="modal-footer">
+                            <div>
+                       <center><button class="btn btn-primary btn-lg1 btn-block" href="#" id="register" data-toggle="modal" data-target="#register-modal" style="background-color: #fff; color: #0072BC; width: 75%;">REGISTER</button>
+                         </center>
+                            </div>
+                            
+				    	   
+				        </div>
+				         <div>
+                               <center><div style="padding-top: 15px; color: #d9d9d9;"> &copy; 2016 - GIFT</div></center>
+                               
+                            </div>
+                    </form>
+                    <!-- End # Login Form -->
+                    
+                    
+                    
+                </div>
+                <!-- End # DIV Form -->
+                
+			</div>
+		</div>
+	</div>
+    <!-- END # MODAL LOGIN -->
+
+  <!-- Modal Register -->
+   <div class="modal fade" id="register-modal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      
+      <div class="modal-content1"> 
+        <div class="modal-header1" align="center">
+        <img id="img_logo1" src="{% static 'image/logo1.png' %}">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <center><h3><span id="text-login-msg" style="color: white;">Get Involved For Tomorrow</span></h3></center>
+          <center><h4 class="modal-title" style="color: white;"><u>Create New Account</u></h4></center>
+        </div>
+        <div class="form-activate" style="padding-left: 50px;margin-right: 15px;margin-left: 15px;margin-top: 15px;">
+        <div class="row">
+        <div class="col-md-6" style="margin-top: 22px;">
+		    <div class="form-group stlye">
+		      <label for="name" style="color: #d9d9d9;">Display Name</label>
+	          <input type="name"  onfocus="myFunction(this)" class="form-control" id="name" style="background-color: #ddd;width: 78%;
+    height: 98%;">
+		    </div>
+		    <div class="form-group">
+		      <label for="email" style="color: #d9d9d9;">Email</label>
+	          <input type="name"  onfocus="myFunction(this)" class="form-control" id="name" style="background-color: #ddd;width: 78%;
+    height: 98%;">
+		    </div>
+		    <div class="form-group">
+		      <label for="text" style="color: #d9d9d9;">Home Town</label>
+	          <input type="text"  onfocus="myFunction(this)" class="form-control" id="name" style="background-color: #ddd;width: 78%;
+    height: 98%;">
+		    </div>
+		    <div class="form-group">
+		      <label for="text" style="color: #d9d9d9;">Age</label>
+	          <input type="text" onfocus="myFunction(this)" class="form-control" id="age" style="background-color: #ddd;width: 78%;
+    height: 98%;">
+		    </div>
+		    </div>
+		    <div class="col-md-6" style="margin-top: 53px;">
+		    <div class="form-group">
+		     <label class="col-md-6 control-label" style="margin-left: -14px;color: #d9d9d9;margin-bottom: -10px; margin-top: -30px" for="radios">Gender</label>
+					<div class="col-md-12 radio1" style="margin-top: -10px; padding-bottom: 10px;">
+					   
+					     
+						<div class="radio">
+							<label for="radios-0" style="color: #d9d9d9;">
+								<span><input type="radio" name="radios" id="radios-0" value="1" checked="checked">	Male</span>
+								<span style="margin-left: 40px;color: #d9d9d9;"><input type="radio" name="radios" id="radios-1" value="0">Female</span>
+							
+							</label>
+							<!-- <label for="radios-1">
+								
+							</label> -->
+							
+							
+						</div>
+						
+						<!-- <div class="radio textwhite">
+						 	
+						</div>
+						 -->
+					</div>
+				</div>
+		    <div class="form-group">
+		      <label for="text" style="color: #d9d9d9;">Occupation</label>
+	          <input type="text" onfocus="myFunction(this)" class="form-control" id="occupation" style="background-color: #ddd;width: 78%;
+    height: 98%;">
+		    </div>
+		    <div class="form-group">
+		      <label for="password" style="color: #d9d9d9;">Password</label>
+	          <input type="password" onfocus="myFunction(this)" class="form-control" id="password" style="background-color: #ddd;width: 78%;
+    height: 98%;">
+		    </div>
+		    <div class="form-group">
+		      <label for="password" style="color: #d9d9d9;">Confirm Password</label>
+	          <input type="password" onfocus="myFunction(this)" class="form-control" id="password" style="background-color: #ddd;width: 78%;
+    height: 98%;">
+		    </div>
+		    </div>
+        </div>
+        </div>
+        <div class="modal-footer" style="padding: 15px 57px 15px 15px;">
+          <center><button type="submit" class="btn btn-primary btn-lg1 btn-block" style="background-color: #fff; color: #0072BC; width: 25%; margin-top:14px; margin-left:45px; ">REGISTER</button>
+        </div>
+          <div class="row">
+        <div class="col-md-6">
+        <hr style="margin-left: 30px;margin-right: 24px;">
+    
+      
+    </div>
+        <div class="col-md-6">
+        <hr style="margin-left: 24px;margin-right: 35px;">
+      
+    </div>
+  </div>
+  <div class="row">
+   <div class="col-md-6">
+   <button type="button" class="btn btn-theme" style="background-color:blue;color:#fff;margin-left: 53px;">Register via Facebook&nbsp;&nbsp;<i class="fa fa-facebook-square" style="font-size: 20px;"></i></button>
+   </div>
+    <div class="col-md-6">
+    <button type="button" class="btn btn-theme"style="background-color:red;color:#fff;margin-left: 52px;">Register via Google+&nbsp;&nbsp;<i class="fa fa-google-plus-square" style="font-size: 20px;"></i></button>
+    </div>
+  </div>
+  <br>
+   <center><div class="row" style="color:#fff;margin-left: -24px;"> Already a User?<a href="#" id="login" data-toggle="modal" data-target="#login-modal"style="color:#fff;"> Login</a>
+  
+  </div></center>
+  <div>
+   <center><div style="padding-top: 15px; color: #d9d9d9;margin-left: -14px;"> &copy; 2016 - GIFT</div></center>
+                               
+   </div>
+      </div>
+      </div>
+      </div>
+     
+
+
+  {%block content%}
+      
+          
+   {% endblock%}
+ 
+<br><br>
+<footer class="navbar-fixed-bottom text-center" style="padding: 5px;">
+  <p> &copy; 2016 - Gift</p>
+</footer>
+
+
+

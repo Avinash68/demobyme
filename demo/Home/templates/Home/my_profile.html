@@ -1,0 +1,120 @@
+{% extends "base2.html" %}
+{% load static from staticfiles %}
+
+
+{% block content %}
+
+<nav class="navbar-inverse">
+  <div class="container-fluid" style="box-shadow: 0 1px 5px rgb(14, 15, 17);">
+     
+ 
+    <ul class="nav navbar-nav">
+     
+       <li><a href="#" role="button">My Profiles</a></li>
+       <li><a href="#" role="button">My Goals</a></li>
+      
+    </ul>
+    
+  </div>
+</nav>
+
+<div class="container">
+ 
+  <form>
+    <div class="row1" style="margin-top: 40px;">
+    <div class="col-md-6" style="padding-left: 80px;">
+    <div class="form-group">
+      <label for="text" style="color: grey;">Display name</label>
+      <input type="text" class="form-control" id="name" style="width:65%;background-color: #ddd;">
+    </div>
+    <div class="form-group">
+      <label for="email" style="color: grey;">Email</label>
+      <input type="email" class="form-control" id="email" style="width:65%;background-color: #ddd;">
+    </div>
+    <div class="form-group">
+      <label for="text" style="color: grey;">Home Town</label>
+      <input type="text" class="form-control" id="hometown" style="width:65%;background-color: #ddd;">
+    </div>
+    <div class="form-group">
+      <label for="text" style="color: grey;">Age</label>
+      <input type="text" class="form-control" id="age" style="width:65%;background-color: #ddd;">
+    </div>
+	   
+    </div>
+    <div class="col-md-6" style="padding-left: 30px;">
+    <div class="form-group">
+		     <label class="col-md-6 control-label"for="radios" style="padding-left: 0px;color: grey;">Gender</label>
+					<div class="col-md-12 radio2">
+					   
+					     
+						<div class="radio2">
+							<label for="radios-0">
+								<span style="color: grey;"><input type="radio" name="radios" id="radios-0" value="1">	 Male</span>
+								<span style="padding-left: 50px;color: grey;"><input type="radio" name="radios" id="radios-1" value="0"> Female</span>
+							
+							</label>
+							<!-- <label for="radios-1">
+								
+							</label> -->
+							
+							
+						</div>
+						
+						<!-- <div class="radio textwhite">
+						 	
+						</div>
+						 -->
+					</div>
+				</div>
+    <div class="form-group">
+      <label for="email" style="color: grey;">Occupation</label>
+      <input type="email" class="form-control" id="occupation" style="width:65%;background-color: #ddd;">
+    </div>
+    <div class="form-group">
+      <label for="password"style="color: grey;">Password</label>
+      <input type="password" class="form-control" id="password" style="width:65%;background-color: #ddd;">
+    </div>
+    <div class="form-group">
+      <label for="password"style="color: grey;">Confirm Password</label>
+      <input type="password" class="form-control" id="password" style="width:65%;background-color: #ddd;">
+    </div>
+    
+	   
+    </div>
+    
+    <div class="row">
+        <div class="col-md-6" style="width: 469px;padding-right: 10px;">
+        <hr>
+    
+      
+    </div>
+        <div class="col-md-6"  style="margin-top: -40px;width:469px;">
+        <hr>
+      
+    </div>
+  </div>
+  <div class="row">
+   <div class="col-md-6">
+   <button type="button" class="btn btn-theme" style="background-color:blue;color:#fff;margin-left: 167px;">Register via Facebook&nbsp;&nbsp;<i class="fa fa-facebook-square"></i></button>
+   </div>
+    <div class="col-md-6">
+    <button type="button" class="btn btn-theme"style="background-color:red;color:#fff;margin-left: 91px;"> Register via Google+&nbsp;&nbsp;<i class="fa fa-google-plus-square"></i></button>
+    </div>
+  </div>
+  
+        <div style="padding-left: 780px; padding-top: 70px;">
+          <button type="button" class="btn1 btn-default" style="background-color: #0072BC;color: white;width: 97px;height: 33px;">Update</button>&nbsp;
+          <button type="button" class="btn1 btn-default" style="background-color: #0072BC;color: white;width: 97px;height: 33px;">Cancel</button>
+        </div>
+  
+   
+    </div>
+    
+  </form>
+  </div>
+    
+    
+
+
+
+{% endblock%}     

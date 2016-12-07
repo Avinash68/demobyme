@@ -1,0 +1,295 @@
+{% load static from staticfiles %}
+<!DOCTYPE html> 
+ <title>Gift Web</title>
+ 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="{% static 'css/style.css' %}" type="text/css" rel="stylesheet" media="all">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+
+
+<!-- jQuery library -->
+
+<script src="{% static 'js/login.js' %}"></script>
+
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+    
+    .div1 {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #458b9d;
+    box-sizing: border-box;
+}
+  </style>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+      <div class="navbar-header">
+       <img id="img_logo" src="{% static 'image/gift2.png' %}" style="height: 50px; width: 275px;">
+    </div>
+ 
+    <ul class="nav navbar-nav navbar-right">
+       <li><a href="#"><span class="glyphicon glyphicon-user"></span> User</a></li>
+       <li><a href="{% url 'home:home' %}"> <role="button" data-toggle="modal" data-target="#login-modal">Logout</a></li>
+       
+    </ul>
+  </div>
+</nav>
+     
+      <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar" style="background-color: #1c7cce;">
+        <span class="icon-bar" style="background-color:#fcf8e3;"></span>
+        <span class="icon-bar" style="background-color:#fcf8e3;"></span>
+        <span class="icon-bar" style="background-color:#fcf8e3;"></span>                    
+      </button>
+     
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar" style="background-color: #1c7cce;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="{% url 'home:gifter' %}" style="color: #fff;">Home</a></li>
+        <li><a href="#" role="button" data-toggle="modal" data-target="#location" style="color: #fff;">Location</a></li>
+        <li><a href="#" role="button" data-toggle="modal" data-target="#myModal" style="color: #fff;">Category</a></li>
+        <li><a href="{% url 'home:my_profile' %}" style="color: #fff;">Profile</a></li>
+        <li><a href="#" style="color: #fff;">Ranking</a></li>
+        <li><a href="#" style="color: #fff;">Past Challenge</a></li>
+        <li><a href="#" style="color: #fff;">Inbox</a></li>
+        <li><a href="#" style="color: #fff;">Disclaimer</a></li>
+        <li><a href="#" style="color: #fff;">FAQs</a></li>
+      </ul>
+      
+    </div>
+
+
+  <!-- Modal Category-->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content" style="width: 75%;">
+        <div class="modal-header" style="background-color: #0072BC;">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <center><h4 class="modal-title" style="color: #fff;">Personalize</h4></center>
+		  <center><h5 class="modal-title" style="color: #fff;">Choose your favourite topic for a more personalized experience</h5></center>
+        </div>
+        <div class="modal-body">
+		<div class="row">
+		<div class="col-md-4">
+        <div class="div1">
+		<div>
+		<input type="checkbox" class="demo  faChkRnd1 pull-right">
+		<center><img src="{% static 'image/gift icon/charity.png' %}" style="height: 50px; width: 50px; padding-top: 10px;"></center>
+		</div>
+		<center><div style="padding-top: 10px; font-family: Consolas; color: #0080ff;">Charity & Causes</div></center>
+		</div>
+		</div>
+		
+		<div class="col-md-4">
+        <div class="div1">
+		<div>
+		<input type="checkbox" class="demo  faChkRnd1 pull-right">
+		<center><img src="{% static 'image/gift icon/community.png' %}" style="height: 50px; width: 50px; padding-top: 10px;"></center></div>
+		<center><div style="padding-top: 10px; font-family: Consolas; color: #0080ff;">Community</div></center>
+		</div>
+		</div>
+		
+		<div class="col-md-4">
+        <div class="div1">
+		<div>
+		<input type="checkbox" class="demo  faChkRnd1 pull-right">
+		<center><img src="{% static 'image/gift icon/family.png' %}" style="height: 50px; width: 50px; padding-top: 10px;"></center></div>
+		<center><div style="padding-top: 10px; font-family: Consolas; color: #0080ff;">Family & Education</div></center>
+		</div>
+		</div>
+		</div>
+		<br>
+		<div class="row">
+		<div class="col-md-4">
+        <div class="div1">
+		<div>
+		<input type="checkbox" class="demo  faChkRnd1 pull-right">
+		<center><img src="{% static 'image/gift icon/sports.png' %}" style="height: 50px; width: 50px; padding-top: 10px;"></center></div>
+		<center><div style="padding-top: 10px; font-family: Consolas; color: #0080ff;">Sports & Fintness</div></center>
+		</div>
+		</div>
+		
+		<div class="col-md-4">
+        <div class="div1">
+		<div>
+		<input type="checkbox" class="demo  faChkRnd1 pull-right">
+		<center><img src="{% static 'image/gift icon/health.png' %}" style="height: 55px; width: 55px; padding-top: 10px;"></center></div>
+		<center><div style="padding-top: 10px;font-family: Consolas; color: #0080ff;">Health</div></center>
+		</div>
+		</div>
+		
+		<div class="col-md-4">
+        <div class="div1">
+		<div>
+		<input type="checkbox" class="demo  faChkRnd1 pull-right">
+		<center><img src="{% static 'image/gift icon/science_tech.png' %}" style="height: 50px; width: 50px; padding-top: 10px;"></center></div>
+		<center><div style="padding-top: 10px; font-family: Consolas; color: #0080ff;"> Science & Tech </div></center>
+		</div>
+		</div>
+		</div> 
+		<br>
+		
+		<div class="row">
+		<div class="col-md-4">
+        <div class="div1">
+		<div>
+		<input type="checkbox" class="demo  faChkRnd1 pull-right">
+		<center><img src="{% static 'image/gift icon/home_lifestyle.png' %}" style="height: 50px; width: 50px; padding-top: 10px;"></center>
+		</div>
+		<center><div style="padding-top: 10px; font-family: Consolas; color: #0080ff;">Home & Lifestyle</div></center>
+		</div>
+		</div>
+		
+		<div class="col-md-4">
+         <div class="div1">
+		<div>
+		<input type="checkbox" class="demo  faChkRnd1 pull-right">
+		<center><img src="{% static 'image/gift icon/hobbies.png' %}" style=" padding-left: 10px; height: 55px; width: 55px; padding-top: 10px;"></center>
+		</div>
+		<center><div style="padding-top: 10px; font-family: Consolas; color: #0080ff;">Hobbies</div></center>
+		</div>
+		</div>
+		
+		<div class="col-md-4">
+        <div class="div1">
+		<div>
+		<input type="checkbox" class="demo  faChkRnd1 pull-right">
+		<center><img src="{% static 'image/gift icon/food_drink.png' %}" style="height: 55px; width: 55px; padding-top: 10px;"></center>
+		</div>
+		<center><div style="padding-top: 10px; font-family: Consolas; color: #0080ff;">Food & Drink</div></center>
+		</div>
+		</div>
+		</div>
+		<br>
+		
+		<div class="row">
+		<div class="col-md-4">
+        <div class="div1">
+		<div>
+		<input type="checkbox" class="demo  faChkRnd1 pull-right">
+		<center><img src="{% static 'image/gift icon/travel.png' %}" style="height: 50px; width: 50px; padding-top: 10px;"></center>
+		</div>
+		<center><div style="padding-top: 10px; font-family: Consolas; color: #0080ff;">Travel & Outdoor</div></center>
+		</div>
+		</div>
+		
+		<div class="col-md-4">
+        <div class="div1">
+		<div>
+		<input type="checkbox" class="demo  faChkRnd1 pull-right">
+		<center><img src="{% static 'image/gift icon/music.png' %}" style="height: 50px; width: 50px; padding-top: 10px;"></center>
+		</div>
+		<center><div style="padding-top: 10px; font-family: Consolas; color: #0080ff;">Music</div></center>
+		</div>
+		</div>
+		
+		<div class="col-md-4">
+        <div class="div1">
+		<div>
+		<input type="checkbox" class="demo  faChkRnd1 pull-right">
+		<center><img src="{% static 'image/gift icon/spiritual.png' %}" style="height: 50px; width: 50px; padding-top: 10px;"></center>
+		</div>
+		<center><div style="padding-top: 10px; font-family: Consolas; color: #0080ff;">Spirituality</div></center>
+		</div>
+		</div>
+		</div>
+		
+        </div>
+		
+		
+        <div class="modal-footer">
+          <center><button type="button" class="btn btn-default1" data-dismiss="modal">Submit</button></center>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+<!-- Locatio-Modal -->
+      <div class="modal fade" id="location" role="dialog" >
+    <div class="modal-dialog"style="width:31%;">
+    
+      <!-- Modal content-->
+      <div class="modal-content" style="width:342px;">
+        <div class="modal-header" style="padding: 0px;">
+          <button type="button" class="close" data-dismiss="modal" style="padding-right: 15px; margin-top: 3px;">&times;</button>
+          <div class="modal-title" style="background-color:#0072BC;color:white;line-height: 2.428571; font-size: 14px;"><u style="margin-left: 16px;">Enter your location</u></div>
+        </div>
+        
+        <div class="modal-body">
+           <div class="row" style="background-color:white;color:#0072BC;height:20px;">
+            <div class="col-md-10">
+              <h5 style="margin-top:-8px;margin-left: 2px; font-size: 16px;">Use my current location
+              </h5>
+              </div>
+              <div class="col-md-2">
+              <img src="{% static 'image/gift icon/gps.png' %}" style="height: 25px; width: 25px; margin-top: -18px;">
+              </div>
+              </div>
+              <div class="row" style="background-color:#0072BC;color:white;line-height: 2.428571;height: 35px;">
+              <h5 style="margin-left: 18px;">Popular Locations</h5>
+              </div>
+              
+				  <ul class="list-group" style="border: 0px solid #fff; width:325px; height: 400px; overflow-y: scroll; margin-bottm=-13px">
+				    <li class="list-group-item"><label>Durban</label><input type="checkbox" class="demo  faChkRnd1 pull-right"></li>
+				    <li class="list-group-item"><label>Cape Town</label><input type="checkbox" class="demo  faChkRnd1 pull-right"></li>
+				    <li class="list-group-item"><label>Johnannesburg</label><input type="checkbox" class="demo  faChkRnd1 pull-right"></li>
+				    <li class="list-group-item"><label>Nelspruit</label><input type="checkbox" class="demo  faChkRnd1 pull-right"></li>
+				    <li class="list-group-item"><label>East London</label><input type="checkbox" class="demo  faChkRnd1 pull-right"></li>
+				    <li class="list-group-item"><label>Polokwane</label><input type="checkbox" class="demo  faChkRnd1 pull-right"></li>
+				    <li class="list-group-item"><label>Bloemfontein</label><input type="checkbox" class="demo  faChkRnd1 pull-right"></li>
+				    <li class="list-group-item"><label>Pretario</label><input type="checkbox" class="demo  faChkRnd1 pull-right"></li>
+				    <li class="list-group-item"><label>Port Elizabeth</label><input type="checkbox" class="demo  faChkRnd1 pull-right"></li>
+					<li class="list-group-item"><label>Durban</label><input type="checkbox" class="demo  faChkRnd1 pull-right"></li>
+				    <li class="list-group-item"><label>Cape Town</label><input type="checkbox" class="demo  faChkRnd1 pull-right"></li>
+				    <li class="list-group-item"><label>Johnannesburg</label><input type="checkbox" class="demo  faChkRnd1 pull-right"></li>
+				    <li class="list-group-item"><label>Nelspruit</label><input type="checkbox" class="demo  faChkRnd1 pull-right"></li>
+				    <li class="list-group-item"><label>East London</label><input type="checkbox" class="demo  faChkRnd1 pull-right"></li>
+				    <li class="list-group-item"><label>Polokwane</label><input type="checkbox" class="demo  faChkRnd1 pull-right"></li>
+				    <li class="list-group-item"><label>Bloemfontein</label><input type="checkbox" class="demo  faChkRnd1 pull-right"></li>
+				    <li class="list-group-item"><label>Pretario</label><input type="checkbox" class="demo  faChkRnd1 pull-right"></li>
+				    <li class="list-group-item"><label>Port Elizabeth</label><input type="checkbox" class="demo  faChkRnd1 pull-right"></li>
+					
+				    </ul>
+
+    <!-- /.row -->
+
+        </div>
+        <div class="modal-footer">
+          <center><button type="button" class="btn btn-default" data-dismiss="modal" style="background-color: #0072BC;color: white;width: 97px;">Submit</button></center>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+{%block content%}
+          
+{% endblock%}
+ 
+
+<br><br>
+<footer class="navbar-bottom text-center" style="padding: 5px;">
+  <p> &copy; 2016 - Gift </p>
+</footer>
+
+
+

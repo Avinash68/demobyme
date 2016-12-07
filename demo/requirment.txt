@@ -1,0 +1,9 @@
+Django==1.9.7
+djangorestframework==3.5.3
+get==0.0.0
+post==0.0.0
+public==0.0.0
+query-string==0.0.0
+request==0.0.0
+requests==2.12.3
+setupfiles==0.0.0
